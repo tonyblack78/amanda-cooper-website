@@ -81,7 +81,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdro
 @media (max-width:820px){.work-grid{grid-template-columns:1fr}}
 .ways-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
 .ways-head h2{font-size:var(--step3);margin-top:12px}
-.ways{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2vw,22px)}
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,22px)}
 .way{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(320px,34vw,380px);padding:28px;border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;background:#fff}
 .way:hover{border-color:var(--gold-soft);box-shadow:0 12px 32px rgba(20,23,42,.08)}
 .way .tint{position:absolute;inset:0;z-index:-1}
@@ -89,6 +89,11 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdro
 .way h3{font-size:1.6rem;color:var(--text)}
 .way p{color:var(--soft);flex:0 0 auto}
 .way .go{font-weight:600;color:var(--gold);font-size:.9rem}
+.way .capacity-pill{position:absolute;top:18px;right:18px;background:var(--rose);color:#fff;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:.4em .8em;border-radius:999px;z-index:1}
+.capacity-banner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:rgba(142,79,214,.08);border:1px solid rgba(142,79,214,.35);border-radius:10px;padding:14px 18px;margin:20px 0 28px}
+.capacity-badge{flex:none;background:var(--rose);color:#fff;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.4em .9em;border-radius:999px}
+.capacity-banner span:last-child{color:var(--soft);font-size:.92rem}
+@media (max-width:1060px){.ways{grid-template-columns:1fr 1fr}}
 @media (max-width:860px){.ways{grid-template-columns:1fr}}
 .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,6vw,72px);align-items:start}
 .about-grid h2{font-size:var(--step3);margin-block:12px 24px}
@@ -149,7 +154,8 @@ footer a:hover{color:#93A6E8}
     <ul>
       <li><a href="#top">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#womens-bdc">The Billion Dollar Club</a></li>
+      <li><a href="#womens-bdc">Women's Group</a></li>
+      <li><a href="#mens-bdc">Men's Group</a></li>
       <li><a href="#course">Course</a></li>
       <li><a class="nav-call" href="mailto:CoachAmandaRae@gmail.com?subject=Book%20a%20Call">Book a Call</a></li>
     </ul>
@@ -191,6 +197,7 @@ footer a:hover{color:#93A6E8}
       <div class="prose">
         <p class="big">I specialize in helping women uncover the resentments and limiting beliefs that are quietly blocking their financial abundance.</p>
         <p class="soft">The women I work with come to me from every starting point. Some already have real success in their lives but feel capped. Some come to me completely broken, even bankrupt. What they all share is an intuitive sense that a better life is possible for them, they just don't yet know how to get there. It's rarely the economy holding them back. It's an old resentment toward a parent, a partner, or a past version of themselves that never got released. The block was never out there, it's inside, and once you find it, you can release it, and life starts moving differently. I do this work through one-on-one coaching, the Billion Dollar Club, and a self-paced course.</p>
+        <p class="soft">The same work holds true for men. I coach men 1:1 and lead the Men's Billion Dollar Club, helping them find and release whatever's quietly capping their income, their relationships, and their drive.</p>
         <p>What shifts when the resentment lifts:</p>
         <ul class="forlist">
           <li>You see income possibilities you couldn't see before</li>
@@ -213,9 +220,9 @@ footer a:hover{color:#93A6E8}
       <div class="ways-head">
         <div>
           <p class="eyebrow">Ways To Work With Me</p>
-          <h2>One group. <em>One course.</em></h2>
+          <h2>Two groups. <em>One course.</em></h2>
         </div>
-        <p class="soft" style="max-width:40ch">A weekly women's group for the guided version of this work, plus a self-paced course for anyone ready to shift their thinking on their own schedule.</p>
+        <p class="soft" style="max-width:40ch">A weekly women's group and a men's group for the guided version of this work, plus a self-paced course for anyone ready to shift their thinking on their own schedule.</p>
       </div>
       <div class="ways">
         <a class="way" href="#womens-bdc">
@@ -224,6 +231,14 @@ footer a:hover{color:#93A6E8}
           <h3>Billion Dollar Club</h3>
           <p>A group of successful, like-minded women releasing the resentments and limiting beliefs blocking their abundance, in career, relationships, health, spirituality, and creativity.</p>
           <span class="go">Explore the Billion Dollar Club →</span>
+        </a>
+        <a class="way" href="#mens-bdc">
+          <span class="capacity-pill">At Capacity</span>
+          <div class="tint" style="background:linear-gradient(165deg,#EEF1FA,#FFFFFF 75%)"></div>
+          <span class="tag">Weekly · Email Lesson + Sunday Zoom</span>
+          <h3>Men's Billion Dollar Club</h3>
+          <p>The same work for men ready to release what's quietly capping their income, their relationships, and their drive. Currently full, join the waitlist.</p>
+          <span class="go">Join the waitlist →</span>
         </a>
         <a class="way" href="#course">
           <div class="tint" style="background:linear-gradient(165deg,#EEF1FA,#FFFFFF 75%)"></div>
@@ -317,6 +332,62 @@ footer a:hover{color:#93A6E8}
     </div>
   </section>
 
+  <section id="mens-bdc" class="panel">
+    <div class="wrap group-grid">
+      <div>
+        <p class="eyebrow">For Men</p>
+        <h2>Men's Billion Dollar Club</h2>
+        <div class="capacity-banner">
+          <span class="capacity-badge">At Capacity</span>
+          <span>The Men's Billion Dollar Club is full for this term. Join the waitlist and we'll reach out the moment a seat opens.</span>
+        </div>
+        <div class="quote-block">
+          "Become a millionaire not for the million dollars, but for what it will make of you to achieve it."
+          <cite>Jim Rohn</cite>
+        </div>
+        <div class="prose">
+          <p>Guided by life coach Amanda Rae Cooper, the Men's Billion Dollar Club ("Men's BDC") is a group of driven men doing the same work as the women's group: finding the resentment or limiting belief (toward a parent, a boss, a past version of yourself) that's quietly capping what you earn, and releasing it so your ambition has somewhere to go.</p>
+          <p class="soft">This is the right place for you if you want to:</p>
+          <ul class="forlist">
+            <li>Finally name what's been capping your income</li>
+            <li>Be around positive, driven, successful men while expanding in all areas of your life</li>
+            <li>Improve your relationships</li>
+            <li>Develop new habits and behaviors that support your goals</li>
+            <li>Stop the incessant negative self-talk that occupies way too much space in your mind</li>
+            <li>Move past (self-inflicted) roadblocks by removing your limiting beliefs</li>
+            <li>Learn new tools to calm your fears, doubts, and worries</li>
+            <li>Work less and earn more</li>
+            <li>Thrive</li>
+          </ul>
+        </div>
+        <h3 style="font-size:1.4rem;color:var(--gold);margin-top:36px;margin-bottom:16px">How It Works</h3>
+        <ol class="steps">
+          <li>Every Thursday, you'll receive the following week's lesson via email from our administrator.</li>
+          <li>Briefly review the lesson (email + attachment).</li>
+          <li>During our Sunday Zoom session, Amanda will explain the lesson.</li>
+          <li>During the week, work on the lesson. This may include watching a video, listening to a recording, writing out your goals, and more.</li>
+        </ol>
+        <div class="faq">
+          <div>
+            <h4>What if I miss a Sunday?</h4>
+            <p class="soft">No worries. Sessions are recorded and posted in the group's chat immediately after each one, just listen to the audio when you have a chance.</p>
+          </div>
+          <div>
+            <h4>What if I get behind?</h4>
+            <p class="soft">This is personal development, not a class to ace. If you try to get an "A," you'll burn yourself out. The people who get the most out of this are the ones willing to half-ass it and keep moving. If you fall behind, just pick up with the most current lesson rather than going back; it's all repetition, and you'll eventually hear everything you need.</p>
+          </div>
+        </div>
+      </div>
+      <div class="group-side">
+        <span class="tag">Men's Group</span>
+        <h3>Join the Waitlist</h3>
+        <p class="soft">The Men's Billion Dollar Club is at capacity right now. Add your name and Amanda will reach out the moment a spot opens up.</p>
+        <a class="btn btn-solid" href="mailto:CoachAmandaRae@gmail.com?subject=Men%27s%20Billion%20Dollar%20Club%20Waitlist">Join the Waitlist</a>
+        <p class="placeholder-note">Placeholder: swap in a waitlist sign-up form once ready</p>
+      </div>
+    </div>
+  </section>
+
   <section id="course" class="band">
     <div class="wrap course-wrap">
       <p class="eyebrow">The Course</p>
@@ -333,7 +404,7 @@ footer a:hover{color:#93A6E8}
     <div class="wrap">
       <p class="eyebrow">Ready When You Are</p>
       <h2>It's time. <em>Let abundance flow.</em></h2>
-      <p class="soft">Every client started with one conversation. Book a free call and we'll find the right way in for you: the Billion Dollar Club, the course, or 1:1 coaching.</p>
+      <p class="soft">Every client started with one conversation. Book a free call and we'll find the right way in for you: the Billion Dollar Club (women's or men's), the course, or 1:1 coaching.</p>
       <div class="hero-cta">
         <a class="btn btn-solid" href="mailto:CoachAmandaRae@gmail.com?subject=Book%20a%20Call">Book a Call</a>
         <a class="btn btn-ghost" href="#womens-bdc">Explore the Billion Dollar Club</a>
@@ -347,14 +418,15 @@ footer a:hover{color:#93A6E8}
     <div class="foot">
       <div>
         <h4>Amanda Rae Cooper</h4>
-        <p class="soft" style="max-width:34ch">Mindset coaching for women based in Los Angeles, releasing the resentments blocking your financial abundance. 1:1 coaching, the Billion Dollar Club, and workshops, in person or via Zoom.</p>
+        <p class="soft" style="max-width:34ch">Mindset coaching for women and men based in Los Angeles, releasing the resentments blocking your financial abundance. 1:1 coaching, the Billion Dollar Club, and workshops, in person or via Zoom.</p>
         <div class="mail"><code id="addr">CoachAmandaRae@gmail.com</code><button type="button" id="copy">Copy</button></div>
         <p class="soft" style="margin-top:8px">(310) 901-5175</p>
       </div>
       <div>
         <h4>The Work</h4>
         <ul>
-          <li><a href="#womens-bdc">Billion Dollar Club</a></li>
+          <li><a href="#womens-bdc">Women's Billion Dollar Club</a></li>
+          <li><a href="#mens-bdc">Men's Billion Dollar Club</a></li>
           <li><a href="#course">The Course</a></li>
           <li><a href="#about">About Amanda</a></li>
         </ul>
