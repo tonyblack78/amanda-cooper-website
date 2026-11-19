@@ -69,12 +69,25 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdro
 .t-hero p{max-width:56ch;margin-inline:auto;color:var(--soft)}
 .t-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,22px);align-items:start}
 @media (max-width:820px){.t-grid{grid-template-columns:1fr}}
-.t-card{border:1px solid var(--line);border-radius:6px;padding:28px;background:#fff;display:flex;flex-direction:column;gap:12px}
-.t-card h3{font-size:1.1rem;color:var(--gold)}
+.t-card{border:1px solid var(--line);border-radius:6px;padding:28px;background:#fff;display:flex;flex-direction:column;gap:14px}
+.t-card blockquote{margin:0;font-family:var(--display);font-size:1.15rem;line-height:1.5;color:var(--text)}
+.t-card-featured blockquote{font-size:1.3rem}
 .t-card cite{font-style:normal;font-size:.78rem;letter-spacing:.04em;color:var(--soft);text-transform:uppercase}
-.t-card p{color:var(--text);line-height:1.65}
+.t-group-h{font-size:var(--step2);margin:0 0 28px}
 .t-note{margin-top:44px;text-align:center}
 .t-note p{max-width:62ch;margin-inline:auto;color:var(--soft);font-size:.88rem}
+.threshold{text-align:center;overflow:hidden;padding-block:clamp(72px,10vw,130px)}
+.threshold h2{font-size:var(--step4);margin-block:16px 20px}
+.threshold p{max-width:52ch;margin-inline:auto}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;justify-content:center}
+.dark{background:var(--ink);color:var(--cream)}
+.dark .eyebrow{color:#6E97F0}
+.dark .soft{color:#B9B9B4}
+.dark .t-group-h{color:var(--cream)}
+.dark .t-card{background:var(--ink-2);border-color:rgba(242,242,239,.14)}
+.dark .t-card blockquote{color:var(--cream)}
+.dark .t-card cite{color:#B9B9B4}
+.dark .btn-ghost{border-color:rgba(110,151,240,.4);color:var(--cream)}
 footer{padding-block:56px 36px;background:#10152B;border-top:1px solid var(--line);color:#D9DDEC}
 footer .soft{color:#9AA1C0}
 footer a{color:#D9DDEC}
@@ -117,134 +130,90 @@ footer a:hover{color:#93A6E8}
 <main>
   <section class="t-hero">
     <div class="wrap">
-      <p class="eyebrow">In Their Words</p>
-      <h1>Real people. <em>Real shifts.</em></h1>
-      <p>Amanda has coached hundreds of women and men through the Billion Dollar Club, 1:1 sessions, and the course. Here's a small sample of what they've shared about the work.</p>
+      <h1>Real Clients. <em>Real Results.</em></h1>
+      <p>See what happens when you change your thoughts.</p>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <h2 class="t-group-h">Featured Results</h2>
+      <div class="t-grid">
+        <div class="t-card t-card-featured">
+          <blockquote>"My career skyrocketed. I'm now the top agent in Los Angeles with a team of 10."</blockquote>
+          <cite>Shelton W., Brentwood</cite>
+        </div>
+        <div class="t-card t-card-featured">
+          <blockquote>"I went from broke to owning multiple businesses that earn lots of money."</blockquote>
+          <cite>Jordan M., Venice Beach</cite>
+        </div>
+        <div class="t-card t-card-featured">
+          <blockquote>"I have paid off all my credit card and student loan debt, we paid for our wedding in cash, I have launched my own business, and am happily married with two kids."</blockquote>
+          <cite>Lindsay L., Culver City</cite>
+        </div>
+        <div class="t-card t-card-featured">
+          <blockquote>"I married the man of my dreams, bought and remodeled our dream home, earn more while working less... I feel like I totally won the lottery of life the day I was introduced to Amanda."</blockquote>
+          <cite>Mary T., Long Beach</cite>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="band">
     <div class="wrap">
+      <h2 class="t-group-h">More Client Stories</h2>
       <div class="t-grid">
         <div class="t-card">
-          <h3>Shelton W.</h3>
-          <cite>Brentwood, Los Angeles</cite>
-          <p>Shelton began working with Amanda as a mentor and later became a full client. Before, his marriage was struggling, his career had no momentum, and complaining had become a habit. Amanda's blunt, non-blaming approach brought fast results, helping him release old resentments and limiting beliefs. Ten years later, his marriage is strong, and he's a top real estate agent in Los Angeles leading a team of ten.</p>
+          <blockquote>"I have a dream job as vice president at a fast-growing media company, and I am the happiest I've ever been."</blockquote>
+          <cite>Lisa S., Los Angeles</cite>
         </div>
         <div class="t-card">
-          <h3>Jordan M.</h3>
-          <cite>Venice Beach, California</cite>
-          <p>Jordan has worked with Amanda for eight years. In that time, he went from broke to owning several profitable businesses, from single to married with a son, and from constant self-criticism to self-acceptance. He describes Amanda as tough, direct, and excellent at what she does, and urges others to take the chance to work with her.</p>
+          <blockquote>"I'm making more money than I ever dreamed, and after following her dating advice, I'm happily married to an incredible man."</blockquote>
+          <cite>Katherine P., Santa Barbara</cite>
         </div>
         <div class="t-card">
-          <h3>Katherine P.</h3>
-          <cite>Santa Barbara, California</cite>
-          <p>Katherine was reluctant to hire a coach but was persuaded by a mutual friend. A doctor had attributed her severe chronic pain entirely to her thoughts and stored emotions, and she was also angry, broke, and single at the time. After going through Amanda's program, the pain is gone, her anger and stress have eased, her income has grown beyond what she expected, and dating advice from Amanda helped her find a happy marriage.</p>
+          <blockquote>"My relationships, career, finances, and my self-confidence all drastically improved."</blockquote>
+          <cite>Roz B., Los Angeles</cite>
         </div>
         <div class="t-card">
-          <h3>Lisa S.</h3>
-          <cite>Los Angeles, California</cite>
-          <p>Lisa started with Amanda in 2018, when her business was failing, her relationship had stalled, and she had little hope. Four years later, she's happily married to the same partner, is a vice president at a fast-growing media company, and says she's happier than she's ever been. She credits Amanda's guidance for the turnaround.</p>
+          <blockquote>"Thanks to Amanda, I've not only achieved but exceeded my goals: professionally, personally, and spiritually."</blockquote>
+          <cite>Audryn S., Culver City</cite>
         </div>
         <div class="t-card">
-          <h3>Roz B.</h3>
-          <cite>Los Angeles, California</cite>
-          <p>Roz says working with Amanda changed her life by helping her see herself and the world more clearly. Her relationships, career, finances, and self-confidence all improved significantly, and she gained practical tools for getting out of her own way and building a fuller life.</p>
+          <blockquote>"This is the first time I have been clear about the vision for my future, my capacity to earn and my potential to succeed."</blockquote>
+          <cite>Colleen F., Los Angeles</cite>
         </div>
         <div class="t-card">
-          <h3>Debra P.</h3>
-          <cite>Venice, California</cite>
-          <p>Debra describes Amanda as gifted, insightful, wise, and someone who genuinely lives by her own teachings. She's seen major changes both in her own life and in the lives of others Amanda has worked with, and says Amanda moves people out of stuck places and toward the life they had only imagined. She encourages others to seize the opportunity.</p>
+          <blockquote>"One year into working with Amanda, I had developed the trust, self esteem and financial independence to see clearly and move forward."</blockquote>
+          <cite>Lisa E., Washington, D.C.</cite>
         </div>
         <div class="t-card">
-          <h3>Audryn S.</h3>
-          <cite>Culver City, California</cite>
-          <p>Audryn calls coaching with Amanda a major turning point. Amanda's direct but compassionate style cut through distractions and focused on what actually mattered, and honest conversations became a path to freedom. Audryn rewrote her personal story, let go of old limiting beliefs and fears, and moved through opportunities that once felt intimidating, exceeding her professional, personal, and spiritual goals.</p>
+          <blockquote>"I have made greater strides in the past nine months of working with Amanda than all of the preceding decades combined."</blockquote>
+          <cite>Seppy A., Brentwood</cite>
         </div>
         <div class="t-card">
-          <h3>Mary T.</h3>
-          <cite>Long Beach, California</cite>
-          <p>Reflecting on her 37th birthday, Mary describes four years with Amanda and her women's group. Before, she was close to ending a relationship and was filled with regret, resentment, and fear about the future. She's now married to that same partner, has remodeled her dream home, earns more while working less, has a closer bond with family, and has a son. She says she feels like she won life's lottery the day she met Amanda.</p>
+          <blockquote>"Amanda's single question altered the trajectory of my life."</blockquote>
+          <cite>Rachael, Brentwood</cite>
         </div>
         <div class="t-card">
-          <h3>Lindsay L.</h3>
-          <cite>Culver City, California</cite>
-          <p>Ten years ago, Lindsay was in a seven-year relationship waiting for a proposal, had bounced a check to her boss, was estranged from her father, was buried in credit card and student loan debt, and was clinically depressed. Amanda didn't make the problems disappear, but gave her practical skills to face her fears and keep moving. Since then, Lindsay has paid off all her debt, paid for her wedding in cash, launched her own business, and is married with two children. She also repaired her relationship with her father before he died, and now approaches life with confidence.</p>
+          <blockquote>"I can move through barriers and go from surviving to thriving."</blockquote>
+          <cite>Patrick Z., Michigan</cite>
         </div>
         <div class="t-card">
-          <h3>Patrick Z.</h3>
-          <cite>Douglas, Michigan</cite>
-          <p>Patrick says working with Amanda has been transformative. Her direct yet caring approach showed him where he was stuck in a story of scarcity and limitation, helping him move from surviving to thriving.</p>
+          <blockquote>"I am starting to take needed risks to grow my business."</blockquote>
+          <cite>Corey H., Agoura Hills</cite>
         </div>
-        <div class="t-card">
-          <h3>Katy D.</h3>
-          <cite>Venice, California</cite>
-          <p>Katy hired Amanda after watching a close friend go from a near-divorce, broke and miserable, to a repaired marriage and a thriving career and business. Katy already had a good marriage and a stable life, but felt she'd played it too safe and was disconnected from life. Coaching helped her become more honest, take risks, and live more fully, mostly by clearing out resentments and limiting beliefs rather than rebuilding her life from scratch. She also brought in her sister, who began living differently within three weeks.</p>
-        </div>
-        <div class="t-card">
-          <h3>Seppy A.</h3>
-          <cite>Brentwood, Los Angeles</cite>
-          <p>After nearly four decades of self-improvement using every tool and professional available, Seppy says the past nine months with Amanda produced more progress than all those previous decades combined. She praises Amanda's insight in uncovering subtle root causes, along with her generosity and expertise. In her sixties, Seppy now feels more hopeful, courageous, and action-oriented than she expected, and wishes she'd started sooner.</p>
-        </div>
-        <div class="t-card">
-          <h3>Lisa E.</h3>
-          <cite>Washington, D.C.</cite>
-          <p>When Lisa met Amanda, she was broke, often in tears, and in a draining relationship she couldn't seem to leave. After a year, she'd gained trust, self-esteem, and financial independence, which gave her the confidence to move forward. By 38, she'd become a more spiritual, loving, abundant, healthy, and capable person. Over the following eight years, Amanda continued guiding her into leadership and further growth.</p>
-        </div>
-        <div class="t-card">
-          <h3>Nancy S.</h3>
-          <cite>Beverly Hills, California</cite>
-          <p>Nancy describes Amanda Cooper as an exceptionally talented coach who quickly gets to the heart of a problem and moves toward solutions. She says Amanda truly sees people, and combines wisdom, experience, and practicality to help clients take ownership of their choices and become their best selves.</p>
-        </div>
-        <div class="t-card">
-          <h3>Rachael</h3>
-          <cite>Brentwood, Los Angeles</cite>
-          <p>A single question from Amanda changed the direction of Rachael's life and her entire worldview. It led to greater maturity and a deep sense of responsibility for her own life. Her ongoing self-discovery keeps bringing growth and enthusiasm, and she feels she has become her most authentic self.</p>
-        </div>
-        <div class="t-card">
-          <h3>Colleen F.</h3>
-          <cite>Los Angeles, California</cite>
-          <p>Colleen says Amanda changed her life by teaching her to work with her mind, fears, anxiety, and self-doubt, which had been blocking her success. The homework motivated her to act and sharpened her critical thinking, helping her release confusion and worry. Her life is now joyful and fulfilled, grounded in discipline and self-improvement, with a clear vision for her future, her earning capacity, and her potential. She recommends Amanda to anyone willing to do the work.</p>
-        </div>
-        <div class="t-card">
-          <h3>Corey H.</h3>
-          <cite>Agoura Hills, California</cite>
-          <p>After years of therapy and self-help books, Corey still carried resentments that interfered with his work, relationships, and well-being. Within a short time working with Amanda, he felt much freer and lighter. His relationships with family and friends have flourished, and he feels empowered and is taking risks to grow his business. He continues working with Amanda to access more of his untapped potential.</p>
-        </div>
-        <div class="t-card">
-          <h3>Renee M.</h3>
-          <cite>Pacific Palisades, California</cite>
-          <p>Renee has known Amanda for over ten years and has seen strong results. She describes Amanda as committed to mindfulness and to challenging old thoughts and beliefs that keep people stuck in the past. She says the work suits brave people who are ready to leave old stories behind and grow spiritually toward a life of abundance.</p>
-        </div>
-        <div class="t-card">
-          <h3>Annie</h3>
-          <cite>San Pablo, California</cite>
-          <p>Every time Annie starts with a new therapist, she ends up explaining what she's learned from Amanda, and the therapists take notes. Though her insurance covered therapy, she stopped seeing several therapists because she didn't want to keep teaching them how to do their jobs. She recommends hiring Amanda and describes her work as almost magical.</p>
-        </div>
-        <div class="t-card">
-          <h3>Nat C.</h3>
-          <cite>Canada</cite>
-          <p>Nat credits Amanda's mix of wisdom, authenticity, support, knowledge, and accountability with driving her personal and financial growth, and giving her a sense of belonging in Amanda's coaching community. From the first meeting, she experienced both compassion and firmness, with Amanda generously pushing her beyond her comfort zone. She found Amanda's openness about her own struggles inspiring. Structured goals, regular check-ins, honest feedback, and connections with other members kept her accountable, and the community of successful women offered encouragement and shared wisdom. Nat reports transformation in her self-awareness, community involvement, finances, and relationships, and recommends Amanda.</p>
-        </div>
-        <div class="t-card">
-          <h3>Carenna W.</h3>
-          <cite>San Diego, California</cite>
-          <p>Carenna says Amanda helped her develop a new mindset about marriage, friendship, health, and fulfillment. Her main takeaway: change begins inside, not outside. She's grateful for Amanda's influence.</p>
-        </div>
-      </div>
-      <div class="t-note">
-        <p class="placeholder-note">These stories are summarized from the full testimonials clients shared on Amanda's current site. Swap in their exact original wording whenever she has it on hand to paste in.</p>
       </div>
     </div>
   </section>
 
-  <section class="t-hero" style="padding-block:clamp(40px,6vw,72px)">
+  <section class="threshold dark">
     <div class="wrap">
-      <h2 style="font-size:var(--step3)">Ready to write your own?</h2>
-      <p style="margin-top:14px">Book a free call and we'll find the right way in for you: the Billion Dollar Club, the course, or 1:1 coaching.</p>
-      <div style="margin-top:26px">
-        <a class="btn btn-solid" href="mailto:CoachAmandaRae@gmail.com?subject=Book%20a%20Call">Book a Call</a>
+      <h2>Ready to change your thoughts and change your life?</h2>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="mailto:CoachAmandaRae@gmail.com?subject=Contact">Contact me</a>
       </div>
+      <p class="soft" style="margin-top:22px;max-width:60ch;margin-inline:auto;font-size:.85rem">Individual results vary. Testimonials reflect the experiences of individual clients and are not a guarantee of future results.</p>
     </div>
   </section>
 </main>
