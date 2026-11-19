@@ -64,8 +64,8 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdro
 @media (max-width:900px){.nav ul li:not(:last-child){display:none}}
 .hero{padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px);background:radial-gradient(55% 65% at 78% 42%,rgba(30,58,138,.06),transparent 70%),var(--night)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .9fr;gap:clamp(28px,5vw,64px);align-items:center}
-.hero h1{font-size:var(--step4);margin-block:20px 24px;position:relative;z-index:1}
-.hero h1::before{content:"";position:absolute;inset:-14px -28px;z-index:-1;border-radius:24px;background:radial-gradient(62% 75% at 38% 46%,rgba(30,58,138,.16),rgba(30,58,138,.05) 65%,transparent 80%)}
+.hero h1{font-size:var(--step4);margin-block:20px 24px}
+.hero h1 em{color:var(--text)}
 .hero .lede{max-width:40ch;font-size:clamp(1.05rem,1rem + .4vw,1.3rem);color:var(--soft)}
 .where{margin-top:20px;font-size:.86rem;letter-spacing:.05em;color:var(--soft)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
