@@ -8,7 +8,7 @@
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@400;500;600&family=Alex+Brush&display=swap">
 <style>
 :root{
   --night:#FFFFFF;
@@ -17,11 +17,15 @@
   --gold:#1E3A8A;
   --gold-soft:rgba(30,58,138,.18);
   --rose:#8E4FD6;
-  --text:#14172A;
-  --soft:#565C71;
+  --text:#000000;
+  --soft:#3A3A3A;
   --line:rgba(20,23,42,.10);
   --display:"Marcellus","Trajan Pro",Georgia,serif;
+  --script:"Alex Brush",cursive;
   --body:"Jost","Avenir Next","Helvetica Neue",Arial,sans-serif;
+  --ink:#0A0A0A;
+  --ink-2:#161616;
+  --cream:#F2F2EF;
   --step-1:clamp(.78rem,.75rem + .1vw,.82rem);
   --step0:clamp(1.03rem,1rem + .2vw,1.14rem);
   --step2:clamp(1.5rem,1.3rem + 1vw,2.1rem);
@@ -49,8 +53,9 @@ section{padding-block:clamp(56px,8vw,104px)}
 .panel{background:var(--night-2)}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
-.logo{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-size:1.15rem;letter-spacing:.04em}
-.logo .orn{width:26px;height:26px;color:var(--gold);flex:none}
+.logo{display:inline-flex;align-items:center;gap:8px;color:#000}
+.logo .orn{width:24px;height:24px;color:var(--gold);flex:none}
+.logo span{font-family:var(--script);font-size:2.1rem;line-height:1;letter-spacing:.01em;color:#000;padding-top:.15em}
 .nav ul{display:flex;align-items:center;gap:22px;list-style:none;margin:0;padding:0;font-size:.88rem}
 .nav ul a{color:var(--soft)}
 .nav ul a:hover{color:var(--gold)}
@@ -59,7 +64,8 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdro
 @media (max-width:900px){.nav ul li:not(:last-child){display:none}}
 .hero{padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px);background:radial-gradient(55% 65% at 78% 42%,rgba(30,58,138,.06),transparent 70%),var(--night)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .9fr;gap:clamp(28px,5vw,64px);align-items:center}
-.hero h1{font-size:var(--step4);margin-block:20px 24px}
+.hero h1{font-size:var(--step4);margin-block:20px 24px;position:relative;z-index:1}
+.hero h1::before{content:"";position:absolute;inset:-14px -28px;z-index:-1;border-radius:24px;background:radial-gradient(62% 75% at 38% 46%,rgba(30,58,138,.16),rgba(30,58,138,.05) 65%,transparent 80%)}
 .hero .lede{max-width:40ch;font-size:clamp(1.05rem,1rem + .4vw,1.3rem);color:var(--soft)}
 .where{margin-top:20px;font-size:.86rem;letter-spacing:.05em;color:var(--soft)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
@@ -90,6 +96,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdro
 .way p{color:var(--soft);flex:0 0 auto}
 .way .go{font-weight:600;color:var(--gold);font-size:.9rem}
 .way .capacity-pill{position:absolute;top:18px;right:18px;background:var(--rose);color:#fff;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:.4em .8em;border-radius:999px;z-index:1}
+.way .soon-pill{position:absolute;top:18px;right:18px;background:var(--gold);color:#fff;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:.4em .8em;border-radius:999px;z-index:1}
 .capacity-banner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:rgba(142,79,214,.08);border:1px solid rgba(142,79,214,.35);border-radius:10px;padding:14px 18px;margin:20px 0 28px}
 .capacity-badge{flex:none;background:var(--rose);color:#fff;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.4em .9em;border-radius:999px}
 .capacity-banner span:last-child{color:var(--soft);font-size:.92rem}
@@ -141,6 +148,40 @@ footer a:hover{color:#93A6E8}
 .social-row a{border:1px solid rgba(217,221,236,.3);border-radius:999px;padding:.4em 1.1em;font-size:.82rem}
 .social-row a:hover{border-color:#93A6E8;color:#93A6E8}
 .placeholder-note{font-size:.72rem;color:#B99CF0;margin-top:6px;letter-spacing:.02em}
+.hiw-title{font-size:1.4rem;color:var(--gold);margin-top:36px;margin-bottom:16px}
+.dark .hiw-title{color:#6E97F0}
+
+/* Dark (black-background) section alternation */
+.dark{background:var(--ink);color:var(--cream)}
+.dark .eyebrow{color:#6E97F0}
+.dark em{color:#6E97F0}
+.dark .soft{color:#B9B9B4}
+.dark .lede{color:#B9B9B4}
+.dark .forlist{border-top-color:rgba(242,242,239,.14)}
+.dark .forlist li{border-bottom-color:rgba(242,242,239,.14)}
+.dark .forlist li::before{border-top-color:#6E97F0}
+.dark .quote-block{color:#6E97F0;border-left-color:rgba(110,151,240,.4)}
+.dark .quote-block cite{color:#B9B9B4}
+.dark .how{background:var(--ink-2);border-color:rgba(242,242,239,.14)}
+.dark .how h3{color:#6E97F0}
+.dark .about-photo{box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.dark .creds span{border-color:rgba(242,242,239,.22);color:#B9B9B4}
+.dark .group-side{background:var(--ink-2);border-color:rgba(242,242,239,.14)}
+.dark .group-side h3{color:var(--cream)}
+.dark .steps li::before{border-color:rgba(110,151,240,.4);color:#6E97F0}
+.dark .faq h4{color:#6E97F0}
+.dark .capacity-banner{background:rgba(142,79,214,.14);border-color:rgba(142,79,214,.45)}
+.dark .capacity-banner span:last-child{color:#B9B9B4}
+.dark .btn-ghost{border-color:rgba(110,151,240,.4);color:var(--cream)}
+.dark .btn-ghost:hover{border-color:#6E97F0}
+.dark .placeholder-note{color:#C9AEF0}
+.dark h2 em{color:#6E97F0}
+.dark hr,.dark .line{border-color:rgba(242,242,239,.14)}
+.soon-banner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:rgba(30,58,138,.1);border:1px solid rgba(30,58,138,.35);border-radius:10px;padding:14px 18px;margin:0 0 28px}
+.dark .soon-banner{background:rgba(110,151,240,.12);border-color:rgba(110,151,240,.4)}
+.soon-badge{flex:none;background:var(--gold);color:#fff;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.4em .9em;border-radius:999px}
+.soon-banner span:last-child{color:var(--soft);font-size:.92rem}
+.dark .soon-banner span:last-child{color:#B9B9B4}
 </style>
 </head>
 <body>
@@ -189,7 +230,7 @@ footer a:hover{color:#93A6E8}
     </div>
   </div>
 
-  <section id="work">
+  <section id="work" class="dark">
     <div class="wrap work-grid">
       <div>
         <p class="eyebrow">The Work</p>
@@ -242,6 +283,7 @@ footer a:hover{color:#93A6E8}
           <span class="go">Join the waitlist →</span>
         </a>
         <a class="way" href="#course">
+          <span class="soon-pill">Coming Soon</span>
           <div class="tint" style="background:linear-gradient(165deg,#EEF1FA,#FFFFFF 75%)"></div>
           <span class="tag">Self-Paced</span>
           <h3>The Course</h3>
@@ -252,7 +294,7 @@ footer a:hover{color:#93A6E8}
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" class="dark">
     <div class="wrap about-grid">
       <div>
         <div class="about-photo">
@@ -305,7 +347,7 @@ footer a:hover{color:#93A6E8}
             <li>Thrive</li>
           </ul>
         </div>
-        <h3 style="font-size:1.4rem;color:var(--gold);margin-top:36px;margin-bottom:16px">How It Works</h3>
+        <h3 class="hiw-title">How It Works</h3>
         <ol class="steps">
           <li>Every Thursday, you'll receive the following week's lesson via email from our administrator, Katherine Pepe.</li>
           <li>Briefly review the lesson (email + attachment).</li>
@@ -333,7 +375,7 @@ footer a:hover{color:#93A6E8}
     </div>
   </section>
 
-  <section id="mens-bdc" class="panel">
+  <section id="mens-bdc" class="dark">
     <div class="wrap group-grid">
       <div>
         <p class="eyebrow">For Men</p>
@@ -361,7 +403,7 @@ footer a:hover{color:#93A6E8}
             <li>Thrive</li>
           </ul>
         </div>
-        <h3 style="font-size:1.4rem;color:var(--gold);margin-top:36px;margin-bottom:16px">How It Works</h3>
+        <h3 class="hiw-title">How It Works</h3>
         <ol class="steps">
           <li>Every Thursday, you'll receive the following week's lesson via email from our administrator.</li>
           <li>Briefly review the lesson (email + attachment).</li>
@@ -393,6 +435,10 @@ footer a:hover{color:#93A6E8}
     <div class="wrap course-wrap">
       <p class="eyebrow">The Course</p>
       <h2>Release what's blocking you, at your own pace.</h2>
+      <div class="soon-banner" style="justify-content:center">
+        <span class="soon-badge">Coming Soon</span>
+        <span>The self-paced course is in the works. Join the Billion Dollar Club or book a 1:1 call in the meantime.</span>
+      </div>
       <p class="lede soft">Amanda's tools for finding the resentments and limiting beliefs quietly capping your abundance, packaged into a self-paced course you can work through whenever it fits your life.</p>
       <div class="hero-cta" style="justify-content:center">
         <a class="btn btn-solid" href="#">Sign Up for the Course</a>
@@ -401,7 +447,7 @@ footer a:hover{color:#93A6E8}
     </div>
   </section>
 
-  <section class="threshold">
+  <section class="threshold dark">
     <div class="wrap">
       <p class="eyebrow">Ready When You Are</p>
       <h2>It's time. <em>Let abundance flow.</em></h2>
